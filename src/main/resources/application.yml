@@ -1,3 +1,22 @@
+# Spring Boot Configuration File
+
+# The 'spring' property contains configurations for Spring Boot.
 spring:
+  # The 'datasource' property contains configurations for the database connection.
   datasource:
+    # The 'url' property specifies the JDBC URL for the database.
     url: jdbc:postgres://localhost:5432/imagelite
+    # The 'username' property specifies the username for the database connection.
+    username: postgres
+    # The 'password' property specifies the password for the database connection.
+    password: postgres
+  # The 'jpa' property contains configurations for the Java Persistence API (JPA).
+  jpa:
+    # The 'database' property specifies the type of the database.
+    database: POSTGRESQL
+    # The 'hibernate' property contains configurations for Hibernate.
+    hibernate:
+      # The 'ddl-auto' property specifies the strategy for the schema initialization.
+      ddl-auto: update
+    # The 'show-sql' property is a flag that enables the display of SQL statements.
+    show-sql: true
